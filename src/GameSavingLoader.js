@@ -3,8 +3,12 @@ import json from "./parser.js";
 
 export default class GameSavingLoader {
     static async load() {
-        const data = await read();
-        const value = await json(data);
-        return value;
+        try {
+            const data = await read();
+            const value = await json(data);
+            return JSON.parse(value);
+        } catch (error) {
+            new Error(error)
+        }
     }
 }
