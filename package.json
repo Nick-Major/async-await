@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "build": "babel src -d dist",
-    "start": "webpack serve --mode development",
+    "serve": "webpack serve --open --mode development",
     "lint": "eslint ."
   },
   "keywords": [],
